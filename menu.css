@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100&family=Ballet:opsz@16..72&family=Fredoka:wght@300&family=Lobster&family=Metal+Mania&family=Raleway:wght@300;400&family=Rampart+One&family=Sancreek&family=Satisfy&family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100&family=Ballet:opsz@16..72&family=Fredoka:wght@300&family=Lobster&family=Metal+Mania&family=Oleo+Script+Swash+Caps&family=Raleway:wght@300;400&family=Rampart+One&family=Sancreek&family=Satisfy&family=Sevillana&display=swap');
+body{
+    text-align: center;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+@media all and (max-width:722px) {
+    .main{
+        flex-wrap: wrap;
+    }
+}
+h1{
+    font-size: 3em;
+    font-family: 'Sancreek', cursive;
+    margin: 15px;
+}
+@media all and (max-width:220px) {
+    h1{
+        font-size: 20px;
+    }
+}
+.productsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 10px;
+    max-width: 70em;
+    min-height: 20em;
+    margin: auto;
+    padding: 10px;
+    background-color: rgb(245, 247, 247);
+    box-shadow: 10px 5px 5px rgb(203, 194, 194);
+}
+.card{
+    margin: 5px;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    width: 16em;
+    border-radius: 50%;
+    background-color: white;
+    transition: all 500ms;
+    margin-top: 5px;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.image{
+    width: 100%;
+    height: auto;
+    width: 10em;
+    border-radius: 5px;
+}
+.image:hover{
+    transform: scale(1.1);
+    animation: imageFruits 3s infinite;
+}
+@keyframes imageFruits {
+    0%   {transform: translateX(5)}
+    25%  { transform: translateY(5)}
+    50%  {transform: translateX(5)}
+    100% {transform: translateY(1em)}
+}
+.priceBox{
+    display: flex;
+    margin-left: 100px;
+    margin-right: 120px;
+}
+.priceName{
+    margin: 5px;
+    padding-top: 15px;
+}
+.price{
+    font-size: 20px;
+    color: rgb(109, 22, 22);
+}
+.shoopingButton{
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    margin-bottom: 15px;
+}
+.shoopingButton:hover{
+    background-color: #84ece7;
+}
+.select{
+    width: 26em;
+    margin: auto;
+    background-color: rgb(199, 224, 224);
+}
+@media all and (max-width:436px) {
+    .select{
+        width: 20em;
+    }
+}
+@media all and (max-width:332px) {
+    .select{
+        font-size: 10px;
+    }
+}
+.headerCart{
+    display: flex;
+    font-weight: bolder;
+    font-style: italic;
+    background-color: rgb(29, 29, 27);
+    color: white;
+    height: 1.5em;
+    padding-top: 5px;
+    justify-content: space-around;
+}
+.headerCart :last-child{
+    margin-right: 20px;
+}
+.selectedcart{
+    flex-wrap: wrap;
+    max-width: 26em;
+    padding-left: 8px;
+}
+.select .selectedcart{
+    display: flex;
+}
+.selectedcart .card{
+    display: flex;
+    width: 100%;
+    border-radius: 5px;
+    width: 25em;
+    justify-content: space-around;
+}
+@media all and (max-width:332px) {
+    .selectedcart .card{
+        flex-wrap: wrap;
+    }
+}
+.selectedcart .card:hover{
+    transform: none;
+}
+.selectedcart img{
+    width: 3em;
+}
+.quantity{
+    width: 3em;
+    height: 1.5em;
+    background-color: rgb(230, 229, 241);
+    border-radius: 5px;
+}
+.selectedcart button{
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 9px rgb(215, 148, 148);
+    height: 20px;
+    font-size: 15px;
+    font-weight: normal;
+    border: none;
+    background-color: rgb(240, 15, 15);
+}
+.selectedcart button:hover{
+    background-color: rgb(250, 157, 157);
+}
+.totalContainer{
+    display: flex;
+    font-weight: bold;
+    justify-content: right;
+    margin-right: 15px;
+    font-size: 18px;
+}
+.total{
+    color: rgb(109, 22, 22);
+    margin-left: 2px;
+}
+.purchase{
+    background-color: rgb(10, 182, 235);
+    display: inline-block;
+    padding: 6px 20px;
+    font-size: 15px;
+    color: #fff;
+    background-color: #3089ce;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px #999;
+    font-weight: bolder;
+    width: 12em;
+    margin-bottom: 7px;
+}
+.purchase:hover{
+    background-color: rgb(21, 205, 218);
+}
+@media all and (max-width:220px) {
+    .selectedcart .card{
+        justify-content: unset;
+        font-size: 10px;
+        margin-left: 12px;
+    }
+    .selectedcart .price{
+        font-size: 10px;
+    }
+    .totalContainer{
+        margin-right: 50px;
+    }
+    .purchase{
+        width: 9em;
+        font-size: 10px;
+    }
+}
